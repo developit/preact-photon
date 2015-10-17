@@ -1,6 +1,6 @@
 # preact-photon [![NPM](http://img.shields.io/npm/v/preact-photon.svg?style=flat)](https://www.npmjs.org/package/preact-photon)
 
-A little wrapper around [photon] to make it cake to use via [preact] (or React*).
+A little wrapper around [photon] to make it cake to use via [preact] _(or React `*`)_.
 
 Requires that you already have the [photon] CSS included in your app.
 
