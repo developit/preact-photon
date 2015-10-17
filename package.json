@@ -28,6 +28,6 @@
     "chai": "^3.3.0",
     "eslint": "^1.7.1",
     "mocha": "^2.3.3",
-    "preact-render-to-string": "^1.1.0"
+    "preact-render-to-string": "^1.1.1"
   }
 }
