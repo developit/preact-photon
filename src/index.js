@@ -1,4 +1,4 @@
-import 'photon/dist/css/photon.css';
+//import 'photon/dist/css/photon.css';
 import preact from 'preact';
 
 /** @jsx h */

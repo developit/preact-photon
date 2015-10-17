@@ -1,11 +1,11 @@
 {
   "name": "preact-photon",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "Preact + Photon = <3",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack"
+    "build": "babel src -s -d dist"
   },
   "keywords": [
     "preact",
@@ -14,20 +14,13 @@
   ],
   "author": "Jason Miller <jason@developit.ca>",
   "license": "ISC",
-  "dependencies": {
-    "babel-runtime": "^5.8.25",
+  "implicitDependencies": {
     "photon": "git+https://github.com/connors/photon.git#v0.1-alpha"
   },
   "peerDependencies": {
-    "preact": "^1.4.0"
+    "preact": "^1.5.0"
   },
   "devDependencies": {
-    "babel-core": "^5.8.25",
-    "babel-loader": "^5.3.2",
-    "css-loader": "^0.19.0",
-    "raw-loader": "^0.5.1",
-    "source-map-loader": "^0.1.5",
-    "style-loader": "^0.12.4",
-    "webpack": "^1.12.2"
+    "babel": "^5.8.23"
   }
 }
