@@ -1,6 +1,6 @@
 {
   "name": "preact-photon",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Preact + Photon = <3",
   "main": "dist/index.js",
   "scripts": {
