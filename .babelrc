@@ -1,0 +1,6 @@
+{
+  "loose": "all",
+  "sourceMaps": true,
+  "nonStandard": true,
+  "jsxPragma": "h"
+}
