@@ -2,7 +2,13 @@
 
 A little wrapper around [photon] to make it cake to use via [preact] _(or React `*`)_.
 
-Requires that you already have the [photon] CSS included in your app.
+This requires that you already have the [photon] CSS included in your app.
+
+
+---
+
+
+## Usage
 
 ```js
 import { h, render } from 'preact';
@@ -31,7 +37,14 @@ render(<App />, document.body);
 
 ---
 
+## License
+
+[MIT]
+
+---
+
 `*` ... though I haven't tested it.
 
 [photon]: https://github.com/connors/photon
 [preact]: https://github.com/developit/preact
+[MIT]: http://choosealicense.com/licenses/mit

@@ -15,7 +15,7 @@
     "electron"
   ],
   "author": "Jason Miller <jason@developit.ca>",
-  "license": "ISC",
+  "license": "MIT",
   "implicitDependencies": {
     "photon": "git+https://github.com/connors/photon.git#v0.1-alpha"
   },
