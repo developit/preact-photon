@@ -5,6 +5,8 @@ try {
 
 /** @jsx h */
 
+const EMPTY = {};
+
 let h = preact && preact.h;
 
 /** Inject your own JSX renderer. */
@@ -13,26 +15,15 @@ export function setJsxRenderer(renderer) {
 }
 
 /** @private */
-function component(render) {
-	return render;
-	// class F extends Component {}
-	// F.prototype.render = render;
-	// return F;
-}
+let component = render => (props=EMPTY) => render(props);
 
 /** @private */
-function c(...args) {
-	return [].concat(...args.filter( x=>x )).join(' ');
-}
+let c = (...args) => [].concat(...args.filter( x => x )).join(' ');
 
 /** @private */
-function componentNode(name, classes) {
-	return component( props => {
-		let c = <div {...props} class={c(props.class, classes)}>{props.children}</div>;
-		c.nodeName = name;
-		return c;
-	});
-}
+let componentNode = (Name, classes) => component( ({ children, ...props }) => (
+	<Name {...props} class={c(props.class, classes)}>{children}</Name>
+));
 
 /** App "footer" bar, shown at the bottom of a window.
  *	@class
