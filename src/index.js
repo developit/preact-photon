@@ -73,17 +73,28 @@ export const ButtonGroup = componentNode('div', 'btn-group');
  *	@example
  *	<Button type="warning">Yellow</Button>
  */
-export const Button = component( props => (
+export const Button = component( ({
+	class: className,
+	children,
+	icon,
+	type,
+	primary,
+	dropdown,
+	mini,
+	large,
+	form,
+	...props
+}) => (
 	<button {...props} class={c(
-		props.class,
-		`btn btn-${props.type || (props.primary ? 'primary' : 'default')}`,
-		props.dropdown && 'btn-dropdown',
-		props.large && 'btn-large',
-		props.mini && 'btn-mini',
-		props.form && 'btn-form'
+		className,
+		`btn btn-${type || (primary ? 'primary' : 'default')}`,
+		dropdown && 'btn-dropdown',
+		large && 'btn-large',
+		mini && 'btn-mini',
+		form && 'btn-form'
 	)}>
-		{ props.icon ? (<Icon name={props.icon} text />) : null }
-		{ props.children }
+		{ icon ? (<Icon name={icon} text />) : null }
+		{ children }
 	</button>
 ));
 
@@ -93,10 +104,8 @@ export const Button = component( props => (
  *	@example
  *	<Icon name="close" />
  */
-export const Icon = component( props => (
-	<span {...props} class={c(props.class, `icon icon-${props.name}`, props.text && 'icon-text')}>
-		{ props.children }
-	</span>
+export const Icon = component( ({ class:className, text, name, children, ...props }) => (
+	<span {...props} class={c(className, `icon icon-${name}`, text && 'icon-text')}>{ children }</span>
 ));
 
 
@@ -117,10 +126,10 @@ export const TabGroup = componentNode('div', 'tab-group');
  *	@example
  *	<Tab close="false">title</Tab>
  */
-export const Tab = component( props => (
-	<div class={c(props.class, 'tab-item')}>
-		{ String(props.close)==='false' ? null : <Icon name="cancel" class="icon-close-tab" /> }
-		{ props.children }
+export const Tab = component( ({ class:className, close, children, ...props }) => (
+	<div class={c(className, 'tab-item')}>
+		{ String(close)==='false' ? null : <Icon name="cancel" class="icon-close-tab" /> }
+		{ children }
 	</div>
 ));
 
@@ -151,10 +160,10 @@ NavGroup.Title = componentNode('h5', 'nav-group-title');
  *	@example
  *	<NavGroup.Item icon="folder">Documents</NavGroup.Item>
  */
-NavGroup.Item = component( props => (
-	<span {...props} class={c(props.class, 'nav-group-item')}>
-		{ props.icon ? (<Icon name={props.icon} />) : null }
-		{ props.children }
+NavGroup.Item = component( ({ class:className, icon, children, ...props }) => (
+	<span {...props} class={c(className, 'nav-group-item')}>
+		{ icon ? (<Icon name={icon} />) : null }
+		{ children }
 	</span>
 ));
 
@@ -195,21 +204,23 @@ const Form = componentNode('form');
 Form.Group = componentNode('div', 'form-group');
 
 /** Basically `<input type="checkbox">` */
-Form.CheckBox = component( props => (
-	<div {...props} class={c(props.class, 'checkbox')}>
+Form.CheckBox = component( ({ class:className, name, checked, value, label, children, ...props }) => (
+	<div {...props} class={c(className, 'checkbox')}>
 		<label>
-			<input type="checkbox" name={props.name} checked={props.checked} value={props.value} />
-			{ [].concat(props.label || [], props.children || []) }
+			<input type="checkbox" name={name} checked={checked} value={value} />
+			{ label || null }
+			{ children }
 		</label>
 	</div>
 ));
 
 /** Basically `<input type="radio">` */
-Form.Radio = component( props => (
-	<div {...props} class={c(props.class, 'radio')}>
+Form.Radio = component( ({ class:className, name, checked, value, label, children, ...props }) => (
+	<div {...props} class={c(className, 'radio')}>
 		<label>
-			<input type="radio" name={props.name} checked={props.checked} value={props.value} />
-			{ [].concat(props.label || [], props.children || []) }
+			<input type="radio" name={name} checked={checked} value={value} />
+			{ label || null }
+			{ children }
 		</label>
 	</div>
 ));
@@ -219,9 +230,9 @@ Form.Actions = componentNode('div', 'form-actions');
 
 
 /** Just an enhanced `<table>` */
-export const Table = component( props => (
-	<table {...props} class={c(props.class, props.striped && 'table-striped')}>
-		{ props.children }
+export const Table = component( ({ class:className, striped, children, ...props }) => (
+	<table {...props} class={c(className, striped && 'table-striped')}>
+		{ children }
 	</table>
 ));
 
