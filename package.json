@@ -1,8 +1,8 @@
 {
   "name": "preact-photon",
-  "version": "0.2.1",
+  "version": "0.2.2",
   "description": "Preact + Photon = <3",
-  "main": "index.js",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "babel src -s -d dist"
