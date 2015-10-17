@@ -1,5 +1,7 @@
-//import 'photon/dist/css/photon.css';
-import preact from 'preact';
+let preact;
+try {
+	preact = require('preact');
+} catch(e) {}
 
 /** @jsx h */
 
