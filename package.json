@@ -4,8 +4,10 @@
   "description": "Preact + Photon = <3",
   "main": "dist/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "babel src -s -d dist"
+    "build": "babel src -s -d dist",
+    "test": "eslint {src,test} && mocha --compilers js:babel/register test/**/*.js",
+    "prepublish": "npm run build",
+    "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
   "keywords": [
     "preact",
@@ -21,6 +23,11 @@
     "preact": "^1.5.0"
   },
   "devDependencies": {
-    "babel": "^5.8.23"
+    "babel": "^5.8.23",
+    "babel-eslint": "^4.1.3",
+    "chai": "^3.3.0",
+    "eslint": "^1.7.1",
+    "mocha": "^2.3.3",
+    "preact-render-to-string": "^1.1.0"
   }
 }
