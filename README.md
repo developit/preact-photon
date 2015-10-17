@@ -1,15 +1,15 @@
 # preact-photon [![NPM](http://img.shields.io/npm/v/preact-photon.svg?style=flat)](https://www.npmjs.org/package/preact-photon)
 
-A little wrapper around [photon] to make it cake to use via [preact].
+A little wrapper around [photon] to make it cake to use via [preact] (or React*).
 
 Requires that you already have the [photon] CSS included in your app.
 
 ```js
-import { h } from 'preact';
+import { h, render } from 'preact';
 import { Header, Title, Footer, Button } from 'preact-photon';
 
 /** Example app component */
-export () => (
+const App = () => (
 	<div id="app">
 		<Header>
 			<Title>Great App</Title>
@@ -25,7 +25,13 @@ export () => (
 		</Footer>
 	</div>
 );
+
+render(<App />, document.body);
 ```
+
+---
+
+`*` ... though I haven't tested it.
 
 [photon]: https://github.com/connors/photon
 [preact]: https://github.com/developit/preact
