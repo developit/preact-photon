@@ -93,7 +93,7 @@ export const Button = component( ({
 		mini && 'btn-mini',
 		form && 'btn-form'
 	)}>
-		{ icon ? (<Icon name={icon} text />) : null }
+		{ icon ? (<Icon name={icon} text={ children && children.length ? true : null } />) : null }
 		{ children }
 	</button>
 ));

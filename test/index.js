@@ -1,7 +1,14 @@
 import { expect } from 'chai';
 import { h } from 'preact';
 import render from 'preact-render-to-string';
-import { Header, Footer, Title, TabGroup, Tab } from '../src';
+import {
+	Header,
+	Footer,
+	Title,
+	TabGroup,
+	Tab,
+	Button
+} from '../src';
 
 /** @jsx h */
 
@@ -45,6 +52,20 @@ describe('preact-photon', () => {
 
 		it('should render without close button', () => {
 			expect(render(<Tab close="false">bar</Tab>)).to.equal('<div class="tab-item">bar</div>');
+		});
+	});
+
+	describe('<Button>', () => {
+		it('should render with text', () => {
+			expect(render(<Button>foo</Button>)).to.equal('<button class="btn btn-default">foo</button>');
+		});
+
+		it('should render icon only', () => {
+			expect(render(<Button icon="home" />)).to.equal('<button class="btn btn-default"><span class="icon icon-home"></span></button>');
+		});
+
+		it('should render icon & text', () => {
+			expect(render(<Button icon="home">bar</Button>)).to.equal('<button class="btn btn-default"><span class="icon icon-home icon-text"></span>bar</button>');
 		});
 	});
 });
