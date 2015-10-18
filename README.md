@@ -11,7 +11,7 @@ This requires that you already have the [photon] CSS included in your app.
 
 ## What does it look like?
 
-Well, this: **[Preact + Photon = <3](http://codepen.io/developit/pen/ZbajXQ?editors=001)** _(@ CodePen)_
+Well, this: **[Preact + Photon = <3](http://codepen.io/developit/pen/ZbajXQ?editors=001)** _(@ [CodePen](http://codepen.io/developit/pen/ZbajXQ?editors=001) or [JSFiddle](https://jsfiddle.net/developit/g5qnLnue/))_
 
 ![preact+photon](http://i.imgur.com/9EgPkqg.png)
 
