@@ -1,6 +1,6 @@
 {
   "name": "preact-photon",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Preact + Photon = <3",
   "main": "dist/index.js",
   "scripts": {
@@ -14,8 +14,16 @@
     "photon",
     "electron"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/developit/preact-photon.git"
+  },
   "author": "Jason Miller <jason@developit.ca>",
   "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/developit/preact-photon/issues"
+  },
+  "homepage": "https://github.com/developit/preact-photon",
   "implicitDependencies": {
     "photon": "git+https://github.com/connors/photon.git#v0.1-alpha"
   },
