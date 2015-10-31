@@ -2,9 +2,9 @@
   "name": "preact-photon",
   "version": "1.0.4",
   "description": "Preact + Photon = <3",
-  "main": "dist/index.js",
+  "main": "preact-photon.js",
   "scripts": {
-    "build": "babel src -s -d dist",
+    "build": "babel -f $npm_package_main -s -o $npm_package_main < src/index.js",
     "test": "eslint {src,test} && mocha --compilers js:babel/register test/**/*.js",
     "prepublish": "npm run build",
     "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
