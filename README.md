@@ -13,7 +13,7 @@ This requires that you already have the [photon] CSS included in your app.
 
 Well, this: **[Preact + Photon = <3](http://codepen.io/developit/pen/ZbajXQ?editors=001)** _(@ [CodePen](http://codepen.io/developit/pen/ZbajXQ?editors=001) or [JSFiddle](https://jsfiddle.net/developit/g5qnLnue/))_
 
-![preact+photon](http://i.imgur.com/9EgPkqg.png)
+<img src="http://i.imgur.com/9EgPkqg.png" width="646" height="346" title="preact+photon">
 
 
 ---
