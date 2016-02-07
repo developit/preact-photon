@@ -28,16 +28,15 @@
     "photon": "git+https://github.com/connors/photon.git#v0.1-alpha"
   },
   "peerDependencies": {
-    "preact": "^1.5.0 || ^2.1.0"
+    "preact": "^1.5.0 || ^2.1.0 || ^3"
   },
   "devDependencies": {
     "babel": "^5.8.23",
-    "babel-eslint": "^4.1.3",
-    "chai": "^3.4.1",
-    "escope": "^3.2.0",
-    "eslint": "^1.10.1",
-    "mocha": "^2.3.4",
-    "preact": "^2.1.0",
-    "preact-render-to-string": "^1.2.0"
+    "babel-eslint": "^4.1.8",
+    "chai": "^3.5.0",
+    "eslint": "^1.10.3",
+    "mocha": "^2.4.5",
+    "preact": "^3.2.0",
+    "preact-render-to-string": "^1.4.2"
   }
 }
