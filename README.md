@@ -1,7 +1,7 @@
 # preact-photon
 
 [![NPM](http://img.shields.io/npm/v/preact-photon.svg?style=flat)](https://www.npmjs.org/package/preact-photon)
-[![travis-ci](https://travis-ci.org/developit/preact-photon.svg)](https://travis-ci.org/developit/preact-photon)
+[![travis-ci](https://travis-ci.org/developit/preact-photon.svg?branch=master)](https://travis-ci.org/developit/preact-photon)
 
 
 A little wrapper around [photon] to make it cake to use via [preact] _(or React `*`)_.
