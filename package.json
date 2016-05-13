@@ -34,7 +34,7 @@
     "babel": "^5.8.23",
     "babel-eslint": "^5.0.0",
     "chai": "^3.5.0",
-    "eslint": "~2.2.0",
+    "eslint": "~2.10.0",
     "mocha": "^2.4.5",
     "preact": "^4.1.1",
     "preact-render-to-string": "^2.0.0"
