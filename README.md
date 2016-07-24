@@ -23,7 +23,7 @@ Well, this: **[Preact + Photon = <3](http://codepen.io/developit/pen/ZbajXQ?edit
 
 ```js
 import { h, render } from 'preact';
-import { Header, Title, Footer, Button } from 'preact-photon';
+import { Header, Title, Footer, Button, Section } from 'preact-photon';
 
 /** Example app component */
 const App = () => (
@@ -33,9 +33,9 @@ const App = () => (
 			<Button icon="home">Home</Button>
 		</Header>
 
-		<Section>
+		<section>
 			Hello there.
-		</Section>
+		</section>
 
 		<Footer>
 			<span>Some great content here.</span>
