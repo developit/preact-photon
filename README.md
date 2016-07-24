@@ -31,11 +31,11 @@ const App = () => (
 		<Header>
 			<Title>Great App</Title>
 			<Button icon="home">Home</Button>
-		<Header>
+		</Header>
 
-		<section>
+		<Section>
 			Hello there.
-		</section>
+		</Section>
 
 		<Footer>
 			<span>Some great content here.</span>
