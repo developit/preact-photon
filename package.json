@@ -37,6 +37,6 @@
     "eslint": "^3.1.0",
     "mocha": "^3.0.0",
     "preact": "^5.3.1",
-    "preact-render-to-string": "^2.6.1"
+    "preact-render-to-string": "^3.0.0"
   }
 }
