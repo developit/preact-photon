@@ -31,7 +31,7 @@ const App = () => (
 		<Header>
 			<Title>Great App</Title>
 			<Button icon="home">Home</Button>
-		<Header>
+		</Header>
 
 		<section>
 			Hello there.
