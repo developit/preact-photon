@@ -1,18 +1,7 @@
-let preact;
-try {
-	preact = require('preact');
-} catch(e) {}
-
 /** @jsx h */
+import { h } from 'preact';
 
 const EMPTY = {};
-
-let h = preact && preact.h;
-
-/** Inject your own JSX renderer. */
-export function setJsxRenderer(renderer) {
-	h = renderer;
-}
 
 /** @private */
 let component = render => (props=EMPTY) => render(props);
