@@ -8,7 +8,6 @@ A little wrapper around [photon] to make it cake to use via [preact] _(or React 
 
 This requires that you already have the [photon] CSS included in your app.
 
-
 ## What does it look like?
 
 Well, this: **[Preact + Photon = <3](http://codepen.io/developit/pen/ZbajXQ?editors=001)** _(@ [CodePen](http://codepen.io/developit/pen/ZbajXQ?editors=001) or [JSFiddle](https://jsfiddle.net/developit/g5qnLnue/))_
@@ -45,6 +44,10 @@ const App = () => (
 
 render(<App />, document.body);
 ```
+
+## Quick Start App
+
+See [preact-photon-electron-quick-start](https://github.com/alexkrolick/preact-photon-electron-quick-start) for a batteries-included starter app.
 
 ---
 
