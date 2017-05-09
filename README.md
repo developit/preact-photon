@@ -1,5 +1,7 @@
 # preact-photon
 
+[![Greenkeeper badge](https://badges.greenkeeper.io/developit/preact-photon.svg)](https://greenkeeper.io/)
+
 [![NPM](http://img.shields.io/npm/v/preact-photon.svg?style=flat)](https://www.npmjs.org/package/preact-photon)
 [![travis-ci](https://travis-ci.org/developit/preact-photon.svg?branch=master)](https://travis-ci.org/developit/preact-photon)
 
