@@ -1,9 +1,11 @@
 {
-  "loose": "all",
-  "modules": "umd",
   "sourceMaps": true,
-  "nonStandard": true,
   "compact": true,
   "comments": false,
-  "jsxPragma": "h"
+  "presets": ["es2015"],
+  "plugins": [
+    "transform-es2015-modules-umd",
+    "transform-object-rest-spread",
+    ["transform-react-jsx", { "pragma":"h" }]
+  ]
 }
