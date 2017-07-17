@@ -5,7 +5,7 @@
   "main": "preact-photon.js",
   "scripts": {
     "build": "babel -f $npm_package_main -s -o $npm_package_main < src/index.js",
-    "test": "eslint src test && mocha --compilers js:babel/register test/**/*.js",
+    "test": "eslint src test && mocha --compilers js:babel-register test/**/*.js",
     "prepublish": "npm run build",
     "release": "npm run build && git commit -am $npm_package_version && git tag $npm_package_version && git push && git push --tags && npm publish"
   },
@@ -31,12 +31,18 @@
     "preact": "*"
   },
   "devDependencies": {
-    "babel": "^5.8.23",
+    "babel-cli": "^6.24.1",
     "babel-eslint": "^7.0.0",
-    "chai": "^3.5.0",
-    "eslint": "^3.1.0",
+    "babel-loader": "^7.1.1",
+    "babel-plugin-transform-es2015-modules-umd": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-plugin-transform-react-jsx": "^6.24.1",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-register": "^6.24.1",
+    "chai": "^4.1.0",
+    "eslint": "^4.2.0",
     "mocha": "^3.0.0",
-    "preact": "^7.2.0",
+    "preact": "^8.2.1",
     "preact-render-to-string": "^3.0.0"
   }
 }
