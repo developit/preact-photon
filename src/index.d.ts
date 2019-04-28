@@ -7,9 +7,6 @@ import {
 } from "preact"
 
 declare module "preact-photon" {
-  // this could be a list of all the supported icons joined by "|"
-  type IconIdentifier = string
-
   type RenderFunction = <P, S>(props: P & Attributes, state: S) => JSX.Element
 
   interface IStylable {
