@@ -1,12 +1,7 @@
-import {
-  h,
-  RenderableProps,
-  Component,
-  AnyComponent,
-  Attributes
-} from "preact"
+import { h, Component, AnyComponent, Attributes } from "preact"
 
 declare module "preact-photon" {
+  type E = JSX.IntrinsicElements
   type RenderFunction = <P, S>(props: P & Attributes, state: S) => JSX.Element
 
   interface IStylable {
@@ -16,21 +11,21 @@ declare module "preact-photon" {
   /** App "footer" bar, shown at the bottom of a window.
    *	@class
    */
-  export class Footer extends Component {
+  export class Footer extends Component<E["footer"]> {
     public render: RenderFunction
   }
 
   /** App "header" bar, shown at the top of a window.
    *	@class
    */
-  export class Header extends Component {
+  export class Header extends Component<E["header"]> {
     public render: RenderFunction
   }
 
   /** Toolbar title.
    *	@class
    */
-  export class Title extends Component {
+  export class Title extends Component<E["h1"]> {
     public render: RenderFunction
   }
 
@@ -42,7 +37,7 @@ declare module "preact-photon" {
    *		<Button>Two</Button>
    *	</ButtonGroup>
    */
-  export class ButtonGroup extends Component {
+  export class ButtonGroup extends Component<E["div"]> {
     public render: RenderFunction
   }
 
@@ -68,17 +63,15 @@ declare module "preact-photon" {
    *	<Button type="warning">Yellow</Button>
    */
   export class Button extends Component<
-    RenderableProps<
-      IStylable & {
-        icon?: string
-        primary?: boolean
-        large?: boolean
-        mini?: boolean
-        dropdown?: boolean
-        form?: boolean
-        type?: "positive" | "negative" | "warning"
-      }
-    >
+    {
+      icon?: string
+      primary?: boolean
+      large?: boolean
+      mini?: boolean
+      dropdown?: boolean
+      form?: boolean
+      type?: "positive" | "negative" | "warning"
+    } & E["button"]
   > {
     public render: RenderFunction
   }
@@ -89,7 +82,7 @@ declare module "preact-photon" {
    *	<Icon name="close" />
    */
   export class Icon extends Component<
-    RenderableProps<IStylable & { text?: string; name: IconIdentifier }>
+    { text?: string; name: IconIdentifier } & E["span"]
   > {
     public render: RenderFunction
   }
@@ -102,7 +95,7 @@ declare module "preact-photon" {
    *		<Tab>Two</Tab>
    *	</TabGroup>
    */
-  export class TabGroup extends Component {
+  export class TabGroup extends Component<E["div"]> {
     public static Item: typeof Tab
     public render: RenderFunction
   }
@@ -114,9 +107,7 @@ declare module "preact-photon" {
    *	@example
    *	<Tab close="false">title</Tab>
    */
-  export class Tab extends Component<
-    RenderableProps<IStylable & { close?: false | "false" }>
-  > {
+  export class Tab extends Component<{ close?: false | "false" } & E["div"]> {
     public render: RenderFunction
   }
 
@@ -128,7 +119,7 @@ declare module "preact-photon" {
    *		<NavGroup.Item>Foo</NavGroup.Item>
    *	</NavGroup>
    */
-  export class NavGroup extends Component {
+  export class NavGroup extends Component<E["nav"]> {
     public static Title: typeof NavGroupTitle
     public static Item: typeof NavGroupItem
     public render: RenderFunction
@@ -139,7 +130,7 @@ declare module "preact-photon" {
    *	@example
    *	<NavGroup.Title>Faves</NavGroup.Title>
    */
-  export class NavGroupTitle extends Component {
+  export class NavGroupTitle extends Component<E["h5"]> {
     public render: RenderFunction
   }
 
@@ -151,7 +142,7 @@ declare module "preact-photon" {
    *	<NavGroup.Item icon="folder">Documents</NavGroup.Item>
    */
   export class NavGroupItem extends Component<
-    RenderableProps<IStylable & { icon: IconIdentifier }>
+    { icon: IconIdentifier } & E["span"]
   > {
     public render: RenderFunction
   }
@@ -166,7 +157,7 @@ declare module "preact-photon" {
    *		<ListGroup.Item>Foo</ListGroup.Item>
    *	</ListGroup>
    */
-  export class ListGroup extends Component {
+  export class ListGroup extends Component<E["ul"]> {
     public static Header: typeof ListGroupHeader
     public static Item: typeof ListGroupItem
     public render: RenderFunction
@@ -179,7 +170,7 @@ declare module "preact-photon" {
    *		<input class="form-control" type="text" placeholder="Search...">
    *	</ListGroup.Header>
    */
-  export class ListGroupHeader extends Component {
+  export class ListGroupHeader extends Component<E["li"]> {
     public render: RenderFunction
   }
 
@@ -188,12 +179,12 @@ declare module "preact-photon" {
    *	@example
    *	<ListGroup.Item>Home</ListGroup.Item>
    */
-  export class ListGroupItem extends Component {
+  export class ListGroupItem extends Component<E["li"]> {
     public render: RenderFunction
   }
 
   /** HTML `<form>` */
-  export class Form extends Component {
+  export class Form extends Component<E["form"]> {
     public static Group: typeof FormGroup
     public static CheckBox: typeof FormCheckBox
     public static Radio: typeof FormRadio
@@ -202,47 +193,41 @@ declare module "preact-photon" {
   }
 
   /** Basically `<fieldset>` */
-  export class FormGroup extends Component {
+  export class FormGroup extends Component<E["div"]> {
     public render: RenderFunction
   }
 
   /** Basically `<input type="checkbox">` */
   export class FormCheckBox extends Component<
-    RenderableProps<
-      IStylable & {
-        name: string
-        checked?: boolean
-        value?: string | number | string[]
-        label?: AnyComponent
-      }
-    >
+    {
+      name: string
+      checked?: boolean
+      value?: string | number | string[]
+      label?: AnyComponent
+    } & E["div"]
   > {
     public render: RenderFunction
   }
 
   /** Basically `<input type="radio">` */
   export class FormRadio extends Component<
-    RenderableProps<
-      IStylable & {
-        name: string
-        checked?: boolean
-        value?: string | number | string[]
-        label?: AnyComponent
-      }
-    >
+    {
+      name: string
+      checked?: boolean
+      value?: string | number | string[]
+      label?: AnyComponent
+    } & E["div"]
   > {
     public render: RenderFunction
   }
 
   /** Group buttons at the bottom of a form. */
-  export class FormActions extends Component {
+  export class FormActions extends Component<E["div"]> {
     public render: RenderFunction
   }
 
   /** Just an enhanced `<table>` */
-  export class Table extends Component<
-    RenderableProps<IStylable & { striped?: boolean }>
-  > {
+  export class Table extends Component<{ striped?: boolean } & E["table"]> {
     public render: RenderFunction
   }
 }
