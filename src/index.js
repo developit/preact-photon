@@ -187,7 +187,7 @@ ListGroup.Item = componentNode('li', 'list-group-item');
 
 
 /** HTML `<form>` */
-const Form = componentNode('form');
+export const Form = componentNode('form');
 
 /** Basically `<fieldset>` */
 Form.Group = componentNode('div', 'form-group');
